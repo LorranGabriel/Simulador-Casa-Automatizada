@@ -1,0 +1,2 @@
+2:('SENSOR DE PRESENÇA', 'Sala', '2')
+1:('SENSOR DE PRESENÇA', 'Sala', '1')

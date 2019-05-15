@@ -11,7 +11,7 @@ Aroldo Vargas: aroldovneto@gmail.com
 Lorran Gabriel Araújo: lorrangabriel20@gmail.com
 
 
-### 1.2 Objetivos 
+### 1.2 Objetivos¹
 
 Objetivo geral do trabalho é desenvolver uma aplicação cliente/servidor utilizando a biblioteca de
 programação socket na linguagem Python, versão 3.5.
@@ -32,4 +32,4 @@ Os objetivos específicos do trabalho são:
 
 ### 5.1 Referencias
 
-[Ref.1](Trabalho01_Programaçãosocket.pdf)
+[¹..Trabalho 1 – Programação socket](Trabalho01_Programaçãosocket.pdf)

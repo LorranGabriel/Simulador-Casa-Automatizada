@@ -1,0 +1,50 @@
+CronoWidget:
+ 
+<CronoWidget>:
+ 
+    BoxLayout:
+        orientation:'vertical'
+        cols: 1
+        spacing: 20
+        padding: [200,10]
+ 
+        BoxLayout:
+            orientation: 'vertical'
+            Label
+                text:'Meu primeiro cronômetro'
+                font_size: 50
+                color: [0,0,1,1]
+ 
+            Label:
+                text:'www.cadernodelaboratorio.com.br'
+                font_size: 40
+                color: [1,2,0,1]
+ 
+        BoxLayout:
+            orientation: 'horizontal'
+ 
+            Label:
+                text:root.cronoValueText1
+                id: valor_cronometro
+                font_size: 70
+                color: [1,0,0,1]           
+ 
+        GridLayout:
+            cols: 4
+            spacing: 20
+            padding: [20,10]
+ 
+            Button:
+                text: 'Iniciar'
+                id: but_iniciar
+            Button:
+                text: 'Parar'
+                id: but_parar
+ 
+            Button:
+                text: 'Reiniciar'
+                id: but_reiniciar
+ 
+            Button:
+                text: 'Zerar'
+                id: but_zerar

@@ -1,0 +1,568 @@
+
+#:import Factory kivy.factory.Factory
+
+<Bolao_Janela>:
+    HomeWidget:
+    DispositivosWidget:
+    Celular:
+
+
+<HomeWidget>:
+    ## Fundo Principal
+    name: 'homeWidget'
+    canvas.before:
+        Color:
+            rgba: 0.5, 0.5, 0.5, 0.5
+
+        Rectangle:
+            size: self.size
+
+    ## Nome da janela
+   
+    BoxLayout:
+        pos_hint:{'center_x':0.5, 'center_y':0.8}
+        Label:
+            text:'Simulador Casa Automatizada'
+            font_size: 50
+            color: [1,1,1,1]
+
+
+    ## Conteudo
+
+        ## Palavras
+    Label:
+        text:'Hora:'
+        font_size: 23
+        pos_hint: {'center_x':.2, 'center_y': .55}
+        color: [1,1,1,1]
+    Label
+        text:'Data:'
+        font_size: 23
+        pos_hint: {'center_x':.2, 'center_y': .45}
+        color: [1,1,1,1]
+    Label:
+        text:'Temperatura:'
+        font_size: 23
+        pos_hint: {'center_x':.2, 'center_y': .35}
+        color: [1,1,1,1]
+
+        ## Caixas
+
+    TextInput:
+        text: ""
+        id: horaLabel
+        font_size: 23
+        size_hint: (None, None)
+        size: (150, 36)
+        pos_hint: {'center_x':.45, 'center_y': .55}
+
+    TextInput:
+        text: ''
+        id: root.dataLabel
+        font_size: 23
+        size_hint: (None, None)
+        size: (150, 36)
+        pos_hint: {'center_x':.45, 'center_y': .45}
+    
+    TextInput:
+        text: ''
+        id: root.temperaturaLabel
+        font_size: 23
+        size_hint: (None, None)
+        size: (150, 36)
+        pos_hint: {'center_x':.45, 'center_y': .35}
+
+    ## Botões da janela
+
+    BoxLayout:
+        pos_hint:{'center_x':1.2, 'center_y':0.56}
+        Button:
+            text: 'Fechar'
+            bold: True
+            font_size: 30
+            id: sair
+            size_hint: (None, None)
+            size: (200, 44)
+            on_press: app.root.switch_to_homeWidget()
+            background_color: 255,0,0 ,1 
+
+
+    BoxLayout:
+        pos_hint:{'center_x':1.2, 'center_y':0.8}
+        Button:
+            text: 'Começar'
+            font_size: 30
+            bold: True
+            id: inicio
+            size_hint: (None, None)
+            size: (200, 44)
+            background_color: 0, 80, 0, 1
+            on_press: app.root.switch_to_dispositivosWidget()
+
+
+<HiddenIcon_ActionPrevious@ActionPrevious>:
+    title: app.title if app.title is not None else 'Gerencia de Missões'
+    with_previous: False
+    app_icon: ''
+    app_icon_width: 0
+    app_icon_height: 0
+    ## Comment out the following two lines if you wish to have
+    ##  ActionGroup(s) and or ActionButtion(s) pushed to the right
+    size_hint_x: None
+    width: len(self.title) * 15
+
+<ImgButton@Button>:
+    size_hint:(None,None)
+    size:(530,330)
+
+
+<DispositivosWidget>:
+    name: 'dispositivosWidget'
+    orientation:'vertical'
+
+
+    canvas:
+        Color:
+            rgb: 0.5, 0.5, 0.5, 0.5
+        Rectangle:
+            size: self.size
+    
+    BoxLayout:
+        pos_hint:{'center_x':0.5, 'center_y':0.9}
+        Label:
+            text:'Simulador'
+            font_size: 50
+            color: [1,1,1,1]
+
+    ## Monitoramento de Fluxo
+
+
+    Label:
+        text:'Hora:'
+        font_size: 14
+        pos_hint: {'center_x':.84, 'center_y': .87}
+        color: [1,1,1,1]
+    Label
+        text:'Data:'
+        font_size: 14
+        pos_hint: {'center_x':.84, 'center_y': .85}
+        color: [1,1,1,1]
+    Label:
+        text:'Temperatura:'
+        font_size: 14
+        pos_hint: {'center_x':.84, 'center_y': .83}
+        color: [1,1,1,1]
+
+
+    Label:
+        id: clocktext
+        text: ""
+        font_size: 14
+        pos_hint: {'center_x':.90, 'center_y': .87}
+        color: [1,1,1,1]
+    Label:
+        id : textData
+        text: ""
+        font_size: 14
+        pos_hint: {'center_x':.90, 'center_y': .85}
+        color: [1,1,1,1]
+    Label:
+        id: textTemperatura
+        text: ""
+        font_size: 14
+        pos_hint: {'center_x':.90, 'center_y': .83}
+        color: [1,1,1,1]
+
+
+    ## Imagens e troca de imagem
+
+    BoxLayout:
+        pos_hint: {'center_x':.55, 'center_y': .85}
+        Image:
+            source: 'Cima.png' 
+            size_hint: (None, None)
+            size: (530, 330)
+
+
+    BoxLayout:
+        pos_hint: {'center_x':1.30, 'center_y': 1.2}   
+        Button:
+            text: "4"
+            color: 0,0,0,1
+            font_size: '20'
+            size: (40, 40)
+            size_hint: (None, None)
+            on_release: image.source='Lado4.png'
+
+
+    BoxLayout:
+        pos_hint: {'center_x':1.25, 'center_y': 1.2}
+        Button:
+            text: "3"
+            color: 0,0,0,1
+            font_size: '20'
+            size: (40, 40)
+            size_hint: (None, None)
+            on_release: image.source='Lado3.png'
+
+    BoxLayout:
+        pos_hint: {'center_x':1.20, 'center_y': 1.2}   
+        Button:
+            text: "2"
+            color: 0,0,0,1
+            font_size: '20'
+            size: (40, 40)
+            size_hint: (None, None)
+            on_release: image.source='Lado2.png'
+
+    BoxLayout:
+        pos_hint: {'center_x':1.15, 'center_y': 1.2}   
+        Button:
+            text: "1"
+            color: 0,0,0,1
+            font_size: '20'
+            size: (40, 40)
+            size_hint: (None, None)
+            on_release: image.source='Lado1.png'
+       
+
+    BoxLayout:
+        pos_hint: {'center_x':1.0, 'center_y': .73}
+        Image:
+            source: 'Lado4.png'
+            id: image
+            size_hint: (None, None)
+            size: (530, 330)
+
+    ##Botões
+
+    BoxLayout:
+        pos_hint:{'center_x':1.3, 'center_y':1.4}
+        Button:
+            text: 'Iniciar'
+            font_size: 20
+            bold: True
+            id: inicio
+            size_hint: (None, None)
+            size: (80, 30)
+            background_color: 0, 80, 0, 1
+            on_press: app.root.init_simulacao(clocktext)
+
+
+
+    BoxLayout:
+        pos_hint:{'center_x':1.2, 'center_y':0.56}
+        Button:
+            text: 'Voltar'
+            bold: True
+            font_size: 30
+            id: sair
+            size_hint: (None, None)
+            size: (200, 44)
+            on_press: app.root.switch_to_homeWidget()
+            background_color: 255,0,0 ,1 
+
+
+    ## Celular
+
+
+    BoxLayout:
+        id: boxCelular
+        pos_hint: {'center_x':.4012, 'center_y': 0.46}
+        Image:
+            source: 'transparente.png' 
+            id: celularImagem
+            size_hint: (None, None)
+            size: (530, 330)
+    
+    
+    Button:
+        id: boxCelular
+        pos_hint: {'center_x':.1, 'center_y': 0.1}
+        text: ''
+        bold: True
+        font_size: 30
+        size_hint: (None, None)
+        size: (173, 35)
+        on_press: app.root.switch_to_homeWidget()
+        background_color: 0,0,0,0
+
+
+    TextInput:
+        text: ''
+        id: celularLabel
+        font_size: 10
+        size_hint: (None, None)
+        size: (175, 110)
+        pos_hint: {'center_x':.1, 'center_y': .19}
+        background_color: 0,0,0,0
+
+
+    ## Painel
+
+
+    BoxLayout:
+        id: boxPainel
+        pos_hint: {'center_x':.76, 'center_y': 0.55}
+        Image:
+            source: 'transparente.png' 
+            id: telaImagem
+            size_hint: (None, None)
+            size: (430, 230)
+
+    TextInput:
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
+        text: ''
+        id: telaLabel
+        font_size: 13
+        size_hint: (None, None)
+        size: (250, 190)
+        pos_hint: {'center_x':.45, 'center_y': .19}
+        background_color: 0,0,0,0
+        color: [1,1,1,1]
+
+    ## informativo
+
+
+    ## Sala
+
+    BoxLayout:
+        pos_hint: {'center_x':.29, 'center_y': .53}
+        Label:
+            id: tempSala
+            text: ""
+            bold: True
+            font_size: 14
+            color: [0,0,0,1]
+
+    BoxLayout:
+        pos_hint: {'center_x':.82, 'center_y':.93}
+        Image:
+            source: 'transparente.png' 
+            id: lampadaSala
+            size_hint: (None, None)
+            size: (41, 41)
+
+    BoxLayout:
+        pos_hint: {'center_x':.88, 'center_y':.93}
+        Image:
+            source: 'transparente.png' 
+            id: arSala
+            size_hint: (None, None)
+            size: (60, 60)
+
+    BoxLayout:  
+        pos_hint: {'center_x':.40, 'center_y': .53}
+        Label:
+            id: pessoasSala
+            text: ""
+            bold: True
+            font_size: 14
+            color: [0,0,0,1]
+
+
+    ## Quarto 1
+
+
+    BoxLayout:
+        pos_hint: {'center_x':.12, 'center_y': .71}
+        Label:
+            id: tempQuarto1
+            text: ""
+            bold: True
+            font_size: 14
+            color: [0,0,0,1]
+    
+
+    BoxLayout:  
+        pos_hint: {'center_x':.19, 'center_y': .71}
+        Label:
+            id: pessoasQuarto1
+            text: ""
+            bold: True
+            font_size: 14
+            color: [0,0,0,1]
+
+    BoxLayout:
+        pos_hint: {'center_x':.63, 'center_y':1.14}
+        Image:
+            source: 'transparente.png' 
+            id: lampadaQuarto1
+            size_hint: (None, None)
+            size: (41, 41)
+
+    BoxLayout:
+        pos_hint: {'center_x':.57, 'center_y':1.12}
+        Image:
+            source: 'transparente.png' 
+            id: arQuarto1
+            size_hint: (None, None)
+            size: (60, 60)
+
+
+
+
+    ## Quarto 2
+
+
+    BoxLayout:
+        pos_hint: {'center_x':.11, 'center_y': .49}
+        Label:
+            id: tempQuarto2
+            text: ""
+            bold: True
+            font_size: 14
+            color: [0,0,0,1]
+    BoxLayout:  
+        pos_hint: {'center_x':.19, 'center_y': .49}
+        Label:
+            id: pessoasQuarto2
+            text: ""
+            bold: True
+            font_size: 14
+            color: [0,0,0,1]
+
+    BoxLayout:
+        pos_hint: {'center_x':.63, 'center_y':.92}
+        Image:
+            source: 'transparente.png' 
+            id: lampadaQuarto2
+            size_hint: (None, None)
+            size: (41, 41)
+
+    BoxLayout:
+        pos_hint: {'center_x':.57, 'center_y':.9}
+        Image:
+            source: 'transparente.png' 
+            id: arQuarto2
+            size_hint: (None, None)
+            size: (60, 60)
+
+
+    ## Cozinha
+
+
+    BoxLayout:
+        pos_hint: {'center_x':.29, 'center_y': .71}
+        Label:
+            id: tempCozinha
+            text: ""
+            bold: True
+            font_size: 14
+            color: [0,0,0,1]
+
+    BoxLayout:  
+        pos_hint: {'center_x':.33, 'center_y': .71}
+        Label:
+            id: pessoasCozinha
+            text: ""
+            bold: True
+            font_size: 14
+            color: [0,0,0,1]
+
+
+    BoxLayout:
+        pos_hint: {'center_x':.79, 'center_y':1.14}
+        Image:
+            source: 'transparente.png' 
+            id: lampadaCozinha
+            size_hint: (None, None)
+            size: (41, 41)
+
+    BoxLayout:
+        pos_hint: {'center_x':.715, 'center_y':.85}
+        Image:
+            source: 'transparente.png' 
+            id: arCozinha
+
+
+
+
+
+    ## Banheiro
+
+    BoxLayout:
+        pos_hint: {'center_x':.11, 'center_y': .576}
+        Label:
+            id: tempBanheiro
+            text: ""
+            bold: True
+            font_size: 14
+            color: [0,0,0,1]
+
+    BoxLayout:  
+        pos_hint: {'center_x':.17, 'center_y': .576}
+        Label:
+            id: pessoasBanheiro
+            text: ""
+            bold: True
+            font_size: 14
+            color: [0,0,0,1]
+
+    BoxLayout:
+        pos_hint: {'center_x':.61, 'center_y':1.03}
+        Image:
+            source: 'transparente.png' 
+            id: lampadaBanheiro
+            size_hint: (None, None)
+            size: (41, 41)
+
+
+    BoxLayout:
+        pos_hint: {'center_x':.715, 'center_y':.85}
+        Image:
+            source: 'transparente.png' 
+            id: arBanheiro
+
+
+
+    ## Corredor
+
+
+    BoxLayout:
+        pos_hint: {'center_x':.23, 'center_y': .71}
+        Label:
+            id: tempCorredor
+            text: ""
+            bold: True
+            font_size: 14
+            color: [0,0,0,1]
+    
+
+    BoxLayout:  
+        pos_hint: {'center_x':.25, 'center_y': .71}
+        Label:
+            id: pessoasCorredor
+            text: ""
+            bold: True
+            font_size: 14
+            color: [0,0,0,1]
+
+
+    BoxLayout:
+        pos_hint: {'center_x':.72, 'center_y':1.12}
+        Image:
+            source: 'transparente.png' 
+            id: lampadaCorredor1
+            size_hint: (None, None)
+            size: (41, 41)
+
+
+    BoxLayout:
+        pos_hint: {'center_x':.72, 'center_y':.94}
+        Image:
+            source: 'transparente.png' 
+            id: lampadaCorredor2
+            size_hint: (None, None)
+            size: (41, 41)
+
+    BoxLayout:
+        pos_hint: {'center_x':.715, 'center_y':.85}
+        Image:
+            source: 'transparente.png' 
+            id: arCorredor
+            size_hint: (None, None)
+            size: (60, 60)
+

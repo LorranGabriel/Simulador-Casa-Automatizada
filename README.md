@@ -7,7 +7,7 @@
 
 Integrantes do grupo:
 
-Aroldo Vargas: aroldovneto@gmail.com
+Aroldo Vargas: aroldovneto@gmail.com<br>
 Lorran Gabriel Araújo: lorrangabriel20@gmail.com
 
 
@@ -15,10 +15,10 @@ Lorran Gabriel Araújo: lorrangabriel20@gmail.com
 
 Objetivo geral do trabalho é desenvolver uma aplicação cliente/servidor utilizando a biblioteca de
 programação socket na linguagem Python, versão 3.5.
-Os objetivos específicos do trabalho são:
-◦ Familiarizar-se com a programação utilizando a API socket.
+Os objetivos específicos do trabalho são:<br>
+◦ Familiarizar-se com a programação utilizando a API socket.<br>
 ◦ Implementar um protocolo controlar um ambiente de dispositivos inteligentes para residências
-(smart home devices).
+(smart home devices).<br>
 ◦ Enviar e receber dados em uma aplicação que utiliza a arquitetura Cliente/Servidor.
 
 

@@ -92,14 +92,23 @@ Ou testar a aplicação em tempo real com sensores pre definidos para teste:<br>
 
 >python3 Casa/Casa_automatizada<br>
 
+## 1.4 Descrição do Projeto
 
-## 1.5 Projeto
+### Arquitetura Cliente Servidor 
+
+
+
+
+## 1.5 Projeto⁴
 
 [Mockup feito com Balsamiq](Projeto/ProjetoSistemaCasa.pdf)
 
 
 ## 6.1 Referencias
+ ¹²³⁴⁵⁶⁷⁸⁹ 
+[¹..Trabalho 1 – Programação socket](Trabalho01_Programaçãosocket.pdf)<br>
+[²..Site Oficial Python](https://www.python.org/)<br>
+[³..Site Oficial Kivy](https://kivy.org/)<br>
 
-[¹..Trabalho 1 – Programação socket](Trabalho01_Programaçãosocket.pdf)
-[²..Site Oficial Python](https://www.python.org/)
-[³..Site Oficial Kivy](https://kivy.org/)
+[⁴..Documentação Oficial da biblioteca de Socket](https://wiki.python.org.br/SocketBasico)<br>
+[⁷..Site Oficial balsamiq](https://balsamiq.com/)<br>

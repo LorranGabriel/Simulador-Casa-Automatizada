@@ -40,16 +40,36 @@ Veja mais [Pagina Oficial](https://www.python.org/downloads/windows/)
 
 #### Ubuntu e derivados 
 
-stable version:<br>
->sudo add-apt-repository ppa:kivy-team/kivy
-<br>
->sudo apt-get update
-<br>
->sudo apt-get install python3-kivy
-<br>
-Caso queira ir alem nas pesquisas, os exemplos sao otimos demonstrativos:
-<br>
+Atualizando os repositorios:<br>
+>sudo add-apt-repository ppa:kivy-team/kivy<br>
+
+>sudo apt-get update<br>
+
+Instalando kivy: <br>
+
+>sudo apt-get install python3-kivy<br>
+
+Caso queira ir alem nas pesquisas, os exemplos sao otimos demonstrativos:<br>
+
 >sudo apt-get install kivy-examples
+
+#### Windows
+
+Utilizando pip
+
+Checando se esta instalada a versão mais atualizada<br>
+
+>python -m pip install --upgrade pip wheel setuptools<br>
+
+Instalando kivy: <br>
+
+>python -m pip install kivy.deps.angle<br>
+
+>python -m pip install kivy<br>
+
+Caso queira ir alem nas pesquisas, os exemplos sao otimos demonstrativos:<br>
+
+>python -m pip install kivy_examples<br>
 
 ### 1.4 Projeto
 

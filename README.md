@@ -32,8 +32,9 @@ Os objetivos específicos do trabalho são:<br>
 >sudo apt-get install python3.5<br>
 
 #### Windows
-<br>
+
 Veja mais [Pagina Oficial](https://www.python.org/downloads/windows/)
+<br>
 <br>
 
 ### 1.3.2 Instalação Kivy³
@@ -55,7 +56,7 @@ Caso queira ir alem nas pesquisas, os exemplos sao otimos demonstrativos:<br>
 
 #### Windows
 
-Utilizando pip
+Utilizando pip:
 
 Checando se esta instalada a versão mais atualizada<br>
 
@@ -74,6 +75,7 @@ Caso queira ir alem nas pesquisas, os exemplos sao otimos demonstrativos:<br>
 <br>
 Veja mais [Pagina Oficial](https://kivy.org/doc/stable/)
 <br>
+<br>
 
 ### 1.3.3 Baixar Repositorio e Iniciar Projeto
 
@@ -91,7 +93,8 @@ Após o download, voce pode iniciar dois arquivos na pasta, um para simular com 
 Ou testar a aplicação em tempo real com sensores pre definidos para teste:<br>
 
 >python3 Casa/Casa_automatizada<br>
-
+<br>
+<br>
 ## 1.4 Descrição do Projeto
 
 ### Arquitetura Cliente Servidor 

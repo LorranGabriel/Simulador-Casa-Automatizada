@@ -22,39 +22,34 @@ Os objetivos específicos do trabalho são:<br>
 ◦ Enviar e receber dados em uma aplicação que utiliza a arquitetura Cliente/Servidor.
 
 
-## 1.3 Preparando Area
+## 1.3 Preparando Espaço
 
-### Python²
+### Instalação Python² 
 
 #### Ubuntu Debian e derivados
 
 >sudo apt-get update<br>
 >sudo apt-get install python3.5<br>
 
-
-
-
 #### Windows
 <br>
 Veja mais [Pagina Oficial](https://www.python.org/downloads/windows/)
 <br>
+
 ### Kivy³
 
 #### Ubuntu e derivados 
 
->stable version:
->>sudo add-apt-repository ppa:kivy-team/kivy
+stable version:<br>
+>sudo add-apt-repository ppa:kivy-team/kivy
 <br>
-sudo apt-get update
-
-Install Kivy
-
-Python2 - python-kivy:
- 	$ sudo apt-get install python-kivy
-Python3 - python3-kivy:
- 	$ sudo apt-get install python3-kivy
-optionally the examples - kivy-examples:
- 	$ sudo apt-get install kivy-examples
+>sudo apt-get update
+<br>
+>sudo apt-get install python3-kivy
+<br>
+Caso queira ir alem nas pesquisas, os exemplos sao otimos demonstrativos:
+<br>
+>sudo apt-get install kivy-examples
 
 ### 1.4 Projeto
 

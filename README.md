@@ -24,6 +24,37 @@ Os objetivos específicos do trabalho são:<br>
 
 ### 1.3 Descrição do trabalho
 
+#### Python²
+
+##### Ubuntu Debian e derivados
+
+>sudo apt-get update
+>sudo apt-get install python3.5
+
+
+
+
+##### Windows
+
+Veja mais [Pagina Oficial](https://www.python.org/downloads/windows/)
+
+#### Kivy³
+
+##### Ubuntu e derivados 
+
+>stable version:
+>>sudo add-apt-repository ppa:kivy-team/kivy
+<br>
+sudo apt-get update
+
+Install Kivy
+
+Python2 - python-kivy:
+ 	$ sudo apt-get install python-kivy
+Python3 - python3-kivy:
+ 	$ sudo apt-get install python3-kivy
+optionally the examples - kivy-examples:
+ 	$ sudo apt-get install kivy-examples
 
 ### 1.4 Projeto
 
@@ -33,3 +64,5 @@ Os objetivos específicos do trabalho são:<br>
 ### 5.1 Referencias
 
 [¹..Trabalho 1 – Programação socket](Trabalho01_Programaçãosocket.pdf)
+[²..Site Oficial Python](https://www.python.org/)
+[³..Site Oficial Kivy](https://kivy.org/)

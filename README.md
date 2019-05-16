@@ -3,7 +3,7 @@
 
 
 
-### 1.1 Equipe
+## 1.1 Equipe
 
 Integrantes do grupo:
 
@@ -11,7 +11,7 @@ Aroldo Vargas: aroldovneto@gmail.com<br>
 Lorran Gabriel Araújo: lorrangabriel20@gmail.com
 
 
-### 1.2 Objetivos¹
+## 1.2 Objetivos¹
 
 Objetivo geral do trabalho é desenvolver uma aplicação cliente/servidor utilizando a biblioteca de
 programação socket na linguagem Python, versão 3.5.
@@ -22,25 +22,25 @@ Os objetivos específicos do trabalho são:<br>
 ◦ Enviar e receber dados em uma aplicação que utiliza a arquitetura Cliente/Servidor.
 
 
-### 1.3 Descrição do trabalho
+## 1.3 Preparando Area
 
-#### Python²
+### Python²
 
-##### Ubuntu Debian e derivados
+#### Ubuntu Debian e derivados
 
->sudo apt-get update
->sudo apt-get install python3.5
-
-
+>sudo apt-get update<br>
+>sudo apt-get install python3.5<br>
 
 
-##### Windows
 
+
+#### Windows
+<br>
 Veja mais [Pagina Oficial](https://www.python.org/downloads/windows/)
+<br>
+### Kivy³
 
-#### Kivy³
-
-##### Ubuntu e derivados 
+#### Ubuntu e derivados 
 
 >stable version:
 >>sudo add-apt-repository ppa:kivy-team/kivy

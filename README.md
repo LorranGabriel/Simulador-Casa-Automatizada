@@ -24,7 +24,7 @@ Os objetivos específicos do trabalho são:<br>
 
 ## 1.3 Preparando Espaço
 
-### Instalação Python² 
+### 1.3.1 Instalação Python² 
 
 #### Ubuntu Debian e derivados
 
@@ -36,7 +36,7 @@ Os objetivos específicos do trabalho são:<br>
 Veja mais [Pagina Oficial](https://www.python.org/downloads/windows/)
 <br>
 
-### Kivy³
+### 1.3.2 Instalação Kivy³
 
 #### Ubuntu e derivados 
 
@@ -71,12 +71,34 @@ Caso queira ir alem nas pesquisas, os exemplos sao otimos demonstrativos:<br>
 
 >python -m pip install kivy_examples<br>
 
-### 1.4 Projeto
+<br>
+Veja mais [Pagina Oficial](https://kivy.org/doc/stable/)
+<br>
+
+### 1.3.3 Baixar Repositorio e Iniciar Projeto
+
+#### Ubuntu e Windows
+
+Pode ser baixando o arquivo compactado pelo [link](https://github.com/LorranGabriel/Simulador-Casa-Automatizada/)<br><br>
+
+Ou utilizando uma ferramenta do git através do terminal<br>
+>git clone https://github.com/LorranGabriel/Simulador-Casa-Automatizada/<br>
+
+Após o download, voce pode iniciar dois arquivos na pasta, um para simular com N interações em tempo real com :<br>
+
+>python3 Projeto_Python/Casa_automatizada<br>
+
+Ou testar a aplicação em tempo real com sensores pre definidos para teste:<br>
+
+>python3 Casa/Casa_automatizada<br>
+
+
+## 1.5 Projeto
 
 [Mockup feito com Balsamiq](Projeto/ProjetoSistemaCasa.pdf)
 
 
-### 5.1 Referencias
+## 6.1 Referencias
 
 [¹..Trabalho 1 – Programação socket](Trabalho01_Programaçãosocket.pdf)
 [²..Site Oficial Python](https://www.python.org/)

@@ -22,7 +22,7 @@ def clienteAC(lista):
 		tcp.send(("AR CONDICIONADO").encode())
 		id_equipamento,time,msg = (tcp.recv(1024)).decode()
 		temp = input("Qual é a temperatura padrão do AR CONDICIONADO "+id_equipamento+" em graus Celsius: ")
-		tcp.send((id_equipamento+","+str(datetime.now())+","+temp).encode())
+		tcp.send((id_equipamento+","+(datetime.now().strftime("%d/%m/%Y %H:%M"))+","+temp).encode())
 		print("ID: "+id_equipamento+"     HORA: "+time+"     MSG: "+msg)
 		r = int(input("Deseja inserir mais algum AR CONDICIONADO?  1-SIM / 2-NÃO  :"))
 

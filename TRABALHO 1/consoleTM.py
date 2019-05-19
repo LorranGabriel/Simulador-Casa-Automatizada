@@ -30,16 +30,18 @@ def clienteTM(lista):
 	r = 1
 	while r == 1:
 		tcp.send(("TOMADA").encode())
-		id_equipamento,time,msg = (tcp.recv(1024)).decode().split(",")
-		print("ID: "+id_equipamento+"     HORA: "+time+"     MSG: "+msg)
+		id_equipamento,hora,msg = (tcp.recv(1024)).decode().split(",")
+		print("ID: "+id_equipamento+"     HORA: "+hora+"     MSG: "+msg)
 		r = int(input("Deseja inserir mais alguma TOMADA?  1-SIM / 2-NÃO  :"))
 
 	#minutos = int(input("Tempo de simulação das tomadas em minutos: "))
 	while True :
-		tcp.send(("SIMULATOMADA").encode())
-		time.sleep(5)    
+		tcp.send(("SIMULAÇÃO DO CONSUMO DAS TOMADAS").encode())
+		time.sleep(120)    
 		numero = randint(0,100)
-		tcp.send(str(numero)+","+str(datetime.now()).encode())
+		data = (datetime.now().strftime("%d/%m/%Y %H:%M"))
+		tcp.send((str(numero)+","+data).encode())
+		print("HORA: "+data+"     CONSUMO: "+str(numero))
 
 	tcp.close()
 

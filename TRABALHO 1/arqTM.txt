@@ -1,3 +1,5 @@
 1:['TOMADA', 'Sala']
-2:['TOMADA', 'Quarto1']
-3:['TOMADA', 'Cozinha']
+2:['TOMADA', 'Corredor']
+3:['TOMADA', 'Quarto1']
+4:['TOMADA', 'Quarto2']
+5:['TOMADA', 'Banheiro']

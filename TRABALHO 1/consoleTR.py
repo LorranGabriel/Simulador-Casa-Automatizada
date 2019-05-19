@@ -24,7 +24,7 @@ def clienteTR(lista):
         tcp.send(("TERMOMETRO").encode())
         id_equipamento,time,msg = (tcp.recv(1024)).decode().split(",")
         temperatura = input("Indique a temperatura em graus Celsius do termometro " + id_equipamento +": ")
-        tcp.send((id_equipamento+","+str(datetime.now())+","+temperatura).encode())
+        tcp.send((id_equipamento+","+(datetime.now().strftime("%d/%m/%Y %H:%M"))+","+temperatura).encode())
         print("ID: "+id_equipamento+"     HORA: "+time+"     MSG: "+msg)
         r = int(input("Deseja inserir mais algum TERMOMETRO?  1-SIM / 2-NÃO  :"))
 

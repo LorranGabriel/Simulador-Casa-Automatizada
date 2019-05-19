@@ -77,10 +77,12 @@ def gerarIDTR(lst):
     return str(num)
 
 def salvaConsumo(valor,hora):
-    arq = open("consumo.txt",'a')
-    arq.write("HORA: "+hora+"   CONSUMO:"+valor+"\n")
+	valor = str(valor)
+	hora = str(hora)
+	arq = open("consumo.txt",'a')
+	arq.write("HORA: "+hora+"   CONSUMO:"+valor+"\n")
 
-    arq.close()
+	arq.close()
 
 def salvaDic(dic,a):
     arq = open(a,'w')
@@ -106,28 +108,28 @@ def conectado(con, cliente):
 		if msg.decode() == "TOMADA":
 			id_dispositivo = gerarIDTM(lstTM)
 			ambiente = input("Insira o ambiente onde a TOMADA "+id_dispositivo+" foi inserida: ")
-			con.send((id_dispositivo+","+str(datetime.now())+","+("TOMADA "+id_dispositivo+" inserida com sucesso!")).encode())
+			con.send((id_dispositivo+","+(datetime.now().strftime("%d/%m/%Y %H:%M"))+","+("TOMADA "+id_dispositivo+" inserida com sucesso!")).encode())
 
 			dicTM[id_dispositivo] = ["TOMADA",ambiente]
 
-		if msg.decode() == "SIMULATOMADA":
+		if msg.decode() == "SIMULAÇÃO DO CONSUMO DAS TOMADAS":
 			msg = con.recv(1024)
 			tm = msg.decode().split(",")
-			consumo = [0]
-			time = [1]
-			salvaConsumo(consumo,str(time))
+			consumo = tm[0]
+			time = tm[1]
+			salvaConsumo(consumo,time)
 
 		if msg.decode() == "LAMPADA":
 			id_dispositivo = gerarIDLA(lstLA)
 			ambiente = input("Ambiente onde a LAMPADA "+id_dispositivo+" foi inserida: ")
-			con.send((id_dispositivo+","+str(datetime.now())+","+("LAMPADA "+id_dispositivo+" inserida com sucesso!")).encode())
+			con.send((id_dispositivo+","+(datetime.now().strftime("%d/%m/%Y %H:%M"))+","+("LAMPADA "+id_dispositivo+" inserida com sucesso!")).encode())
 
 			dicLA[id_dispositivo] = ["LAMPADA",ambiente,"desligada"]
 
 		if msg.decode() == "AR CONDICIONADO":       
 			id_dispositivo = gerarIDAC(lstAC)
 			ambiente = input("Ambiente onde o AR CONDICIONADO "+id_dispositivo+" foi inserido: ")
-			con.send((id_dispositivo+","+str(datetime.now())+","+("AR CONDICIONADO "+id_dispositivo+" inserido com sucesso!")).encode())
+			con.send((id_dispositivo+","+(datetime.now().strftime("%d/%m/%Y %H:%M"))+","+("AR CONDICIONADO "+id_dispositivo+" inserido com sucesso!")).encode())
 
 			msg = con.recv(1024)
 			ac = msg.decode().split(",")
@@ -152,7 +154,7 @@ def conectado(con, cliente):
 			time = sp[1]
 			presenca = sp[2]
 			print("ID: "+id+"     HORA: "+time+"     MSG: "+presenca)
-			con.send((id_dispositivo+","+str(datetime.now())+","+("SENSOR DE PRESENÇA "+id_dispositivo+" inserido com sucesso!")).encode())
+			con.send((id_dispositivo+","+(datetime.now().strftime("%d/%m/%Y %H:%M"))+","+("SENSOR DE PRESENÇA "+id_dispositivo+" inserido com sucesso!")).encode())
 
 			dicSP[id_dispositivo] = ["SENSOR DE PRESENÇA",ambiente,presenca]
          
@@ -163,7 +165,7 @@ def conectado(con, cliente):
 			#Solicita ao usuário o ambiente onde o dispositivo foi instalado
 			ambiente = input("Ambiente onde o TERMOMETRO "+id_dispositivo+" foi inserido: ")
 			#Envia mensagem para o dispositivo informando seu ID
-			con.send((id_dispositivo+","+str(datetime.now())+","+("TERMOMETRO "+id_dispositivo+" inserido com sucesso!")).encode())
+			con.send((id_dispositivo+","+(datetime.now().strftime("%d/%m/%Y %H:%M"))+","+("TERMOMETRO "+id_dispositivo+" inserido com sucesso!")).encode())
 
 			msg = con.recv(1024)
 			tr = msg.decode().split(",")
@@ -174,7 +176,7 @@ def conectado(con, cliente):
 			dicTR[id_dispositivo] = ["TERMOMETRO",ambiente,temperatura]
 
           
-		print (cliente, tipo_dispositivo)
+		#print (cliente, tipo_dispositivo)
 
 		#Salva os dicionarios com as informações dos dispositivos em seus respectivos arquivos de texto
 		if dicTR:
@@ -187,7 +189,6 @@ def conectado(con, cliente):
 			salvaDic(dicAC,"arqAC.txt")
 		if dicLA:
 			salvaDic(dicLA,"arqLA.txt")
-			''' TEM QUE FAZER AQUI, PROCESSO PARA LIGAR AS LAMPADAS
 			lstAmbientes = verificaPresenca(dicSP)
 			if msg.decode() ==  "simularLA":
 				print("cheguei")
@@ -198,7 +199,7 @@ def conectado(con, cliente):
 					estado = dic[chave][2]
 					con.send((id_dispositivo+","+str(datetime.now())+","+("LAMPADA "+id_dispositivo)).encode())
 
-				salvaDic(dicLA,"arqLA.txt")'''
+				salvaDic(dicLA,"arqLA.txt")
 
 	
 

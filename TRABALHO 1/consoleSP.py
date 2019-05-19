@@ -22,7 +22,7 @@ def clienteSP(lista):
         tcp.send(("SENSOR DE PRESENÇA").encode())
         id_equipamento,ambiente = (tcp.recv(1024)).decode().split(",")
         presenca = input("Existem pessoas no(a)"+ambiente +": 1-SIM / 2-NÃO ")
-        tcp.send((id_equipamento+","+str(datetime.now())+","+presenca).encode())
+        tcp.send((id_equipamento+","+(datetime.now().strftime("%d/%m/%Y %H:%M"))+","+presenca).encode())
         id_equipamento,time,msg = (tcp.recv(1024)).decode().split(",")
         print("ID: "+id_equipamento+"     HORA: "+time+"     MSG: "+msg)
         r = int(input("Deseja inserir mais algum SENSOR DE PRESENÇA?  1-SIM / 2-NÃO  : "))

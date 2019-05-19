@@ -73,7 +73,7 @@ Caso queira ir alem nas pesquisas, os exemplos sao otimos demonstrativos:<br>
 >python -m pip install kivy_examples<br>
 
 <br>
-Veja mais [Pagina Oficial](https://kivy.org/doc/stable/)
+Veja mais [Pagina Oficial](https://www.kivy.org/doc/stable/)
 <br>
 <br>
 
@@ -95,6 +95,7 @@ Ou testar a aplicação em tempo real com sensores pre definidos para teste:<br>
 >python3 Casa/Casa_automatizada<br>
 <br>
 <br>
+
 ## 1.4 Descrição do Projeto
 
 ### Arquitetura Cliente Servidor 

@@ -189,6 +189,7 @@ def conectado(con, cliente):
 			salvaDic(dicAC,"arqAC.txt")
 		if dicLA:
 			salvaDic(dicLA,"arqLA.txt")
+			'''
 			lstAmbientes = verificaPresenca(dicSP)
 			if msg.decode() ==  "simularLA":
 				print("cheguei")
@@ -199,7 +200,7 @@ def conectado(con, cliente):
 					estado = dic[chave][2]
 					con.send((id_dispositivo+","+str(datetime.now())+","+("LAMPADA "+id_dispositivo)).encode())
 
-				salvaDic(dicLA,"arqLA.txt")
+				salvaDic(dicLA,"arqLA.txt")'''
 
 	
 

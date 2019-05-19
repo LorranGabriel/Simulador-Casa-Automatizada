@@ -1,0 +1,2 @@
+O arquivo thread é o do servidor, starta ele primeiro, depois e so rodar os consoles dos clientes, acho que o arquivo Iniciar.py está funcionando
+Estou modificando algumas coisa no consoleTM (cliente tomada) ainda, estou inserindo valores aleatorios no arquivo consumo.txt

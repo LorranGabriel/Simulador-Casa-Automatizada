@@ -1,0 +1,2 @@
+1:['TOMADA', 'Cozinha']
+2:['TOMADA', 'Quarto2']

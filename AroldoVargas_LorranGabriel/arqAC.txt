@@ -1,0 +1,1 @@
+1:['AR CONDICIONADO', 'Quarto1', 'ligado']

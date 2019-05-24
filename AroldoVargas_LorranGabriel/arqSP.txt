@@ -1,0 +1,2 @@
+1:['SENSOR DE PRESENÇA', 'Sala', '1']
+2:['SENSOR DE PRESENÇA', 'Corredor', '1']

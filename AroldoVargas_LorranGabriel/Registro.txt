@@ -1,0 +1,14 @@
+1,22/05/2019 09:06,TOMADA 1 inserida em Cozinha
+1,22/05/2019 09:06,LAMPADA 1 inserida em Quarto1
+2,22/05/2019 09:06,TOMADA 2 inserida em Quarto2
+1,22/05/2019 09:07,SENSOR DE PRESENÇA 1 inserido em Sala
+1,22/05/2019 09:06,AR CONDICIONADO 1 inserido em Quarto1
+1,22/05/2019 09:10,LAMPADA 1 inserida em Quarto1
+1,22/05/2019 09:11,SENSOR DE PRESENÇA 1 inserido em Sala
+2,22/05/2019 09:15,LAMPADA 2 inserida em Corredor
+2,22/05/2019 09:15,SENSOR DE PRESENÇA 2 inserido em Corredor
+1,22/05/2019 09:27,SENSOR DE PRESENÇA 1 inserido em Sala
+2,22/05/2019 09:27,SENSOR DE PRESENÇA 2 inserido em Corredor
+1,22/05/2019 09:27,LAMPADA 1 inserida em Sala
+2,22/05/2019 09:27,LAMPADA 2 inserida em Quarto1
+3,22/05/2019 09:28,LAMPADA 3 inserida em Corredor

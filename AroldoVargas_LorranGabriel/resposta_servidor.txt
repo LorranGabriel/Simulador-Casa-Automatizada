@@ -1,0 +1,6 @@
+Sala
+Quarto1
+Cozinha
+Corredor
+Quarto2
+Sala
